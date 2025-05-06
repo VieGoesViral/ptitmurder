@@ -1,31 +1,36 @@
 :root {
   --main-orange: #ff7a00;
-  --dark-bg: #1b1305;
-  --card-bg: #2a1a00;
+  --dark-blue: #0b0f1a;
+  --card-blue: #1a2238;
+  --panel-blue: #1f2940;
   --text-light: #ffffff;
 }
 
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: var(--dark-bg);
+  background-color: var(--dark-blue);
   color: var(--text-light);
 }
 
 header.hero {
   text-align: center;
-  padding: 60px 20px;
-  background: var(--card-bg);
+  padding: 100px 20px;
+  background: url('header-bg.jpg') center/cover no-repeat, var(--card-blue);
+  position: relative;
+  color: white;
 }
 
 .hero h1 {
   font-size: 3em;
   margin: 0;
+  z-index: 1;
 }
 
 .hero p {
   margin-top: 10px;
   font-size: 1.2em;
+  z-index: 1;
 }
 
 .hero button {
@@ -57,13 +62,12 @@ section {
 }
 
 .card {
-  background: var(--card-bg);
+  background: var(--card-blue);
   padding: 20px;
   border-radius: 8px;
   flex: 1;
   min-width: 150px;
   text-align: center;
-  box-shadow: 0 0 10px rgba(255, 122, 0, 0.2);
 }
 
 .team .roles {
@@ -74,10 +78,9 @@ section {
 }
 
 .role {
-  background: var(--card-bg);
+  background: var(--panel-blue);
   padding: 15px;
   border-radius: 6px;
-  box-shadow: 0 0 8px rgba(255, 122, 0, 0.15);
 }
 
 .gallery-grid {
