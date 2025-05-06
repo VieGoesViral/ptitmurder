@@ -13,6 +13,73 @@ body {
   color: var(--text-light);
 }
 
+/* ---------------- NAVBAR ----------------- */
+.navbar {
+  background-color: var(--panel-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--main-orange);
+}
+
+.nav-btn {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: var(--main-orange);
+  color: white;
+  border-color: var(--main-orange);
+}
+
+.player-count {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: limegreen;
+}
+
 /* ---------------- HERO ----------------- */
 
 header.hero {
@@ -26,13 +93,11 @@ header.hero {
 .hero h1 {
   font-size: 3em;
   margin: 0;
-  z-index: 1;
 }
 
 .hero p {
   margin-top: 10px;
   font-size: 1.2em;
-  z-index: 1;
 }
 
 .hero button {
@@ -52,7 +117,77 @@ header.hero {
   background-color: #e86c00;
 }
 
-/* ---------------- ABOUT MODERN ----------------- */
+/* ---------------- SERVER SECTION ----------------- */
+
+.server-section {
+  background-color: var(--card-blue);
+  padding: 60px 20px;
+  border-top: 2px solid var(--main-orange);
+}
+
+.server-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.server-image img {
+  width: 480px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.server-info {
+  max-width: 500px;
+}
+
+.server-info h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.server-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.server-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.server-btn {
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.server-btn.join {
+  background-color: var(--main-orange);
+}
+
+.server-btn.join:hover {
+  background-color: #e86c00;
+}
+
+.server-btn.discord {
+  background-color: #5865F2;
+}
+
+.server-btn.discord:hover {
+  background-color: #4851c4;
+}
+
+/* ---------------- ABOUT SECTION ----------------- */
 
 .about-modern {
   padding: 60px 20px;
@@ -124,7 +259,7 @@ header.hero {
   text-align: center;
 }
 
-/* ---------------- TEAM MODERN ----------------- */
+/* ---------------- STAFF ----------------- */
 
 .team-modern {
   padding: 40px 20px;
@@ -167,37 +302,7 @@ header.hero {
   color: #d1d1d1;
 }
 
-/* ---------------- GALLERY ----------------- */
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.gallery-grid img {
-  width: 100%;
-  border-radius: 8px;
-  border: 2px solid var(--main-orange);
-}
-
-/* ---------------- FOOTER ----------------- */
-
-footer {
-  text-align: center;
-  padding: 20px;
-}
-
-.store-link {
-  color: var(--main-orange);
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.store-link:hover {
-  text-decoration: underline;
-}
+/* ---------------- COMMUNITY LIFE ----------------- */
 
 .life-section {
   background-color: var(--card-blue);
@@ -216,8 +321,6 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  justify-content: center;
-  align-items: stretch;
 }
 
 .life-card {
@@ -248,135 +351,35 @@ footer {
   font-size: 0.95em;
   color: #ccc;
 }
-.server-section {
-  background-color: var(--card-blue);
-  padding: 60px 20px;
-  border-top: 2px solid var(--main-orange);
-}
 
-.server-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-}
+/* ---------------- GALLERY ----------------- */
 
-.server-image img {
-  width: 460px; /* previously 320px */
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  max-w
-
-
-.server-info {
-  max-width: 500px;
-}
-
-.server-info h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.server-info p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  color: #ccc;
-}
-
-.server-buttons {
-  display: flex;
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 15px;
-  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
-.server-btn {
-  padding: 10px 18px;
-  border-radius: 6px;
-  font-weight: bold;
-  text-decoration: none;
-  color: white;
-  transition: background-color 0.3s ease;
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid var(--main-orange);
 }
 
-.server-btn.join {
-  background-color: var(--main-orange);
+/* ---------------- FOOTER ----------------- */
+
+footer {
+  text-align: center;
+  padding: 20px;
 }
 
-.server-btn.join:hover {
-  background-color: #e86c00;
-}
-
-.server-btn.discord {
-  background-color: #5865F2;
-}
-
-.server-btn.discord:hover {
-  background-color: #4851c4;
-}
-.navbar {
-  background-color: var(--panel-blue);
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-}
-
-.nav-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo {
-  height: 36px;
-}
-
-.nav-title {
-  font-size: 1.3rem;
-  font-weight: bold;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.nav-links a:hover {
+.store-link {
   color: var(--main-orange);
-}
-
-.nav-btn {
-  background-color: transparent;
-  border: 1px solid white;
-  padding: 6px 12px;
-  border-radius: 4px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 
-.nav-btn:hover {
-  background-color: var(--main-orange);
-  border-color: var(--main-orange);
-  color: white;
-}
-
-.player-count {
-  font-weight: bold;
-  font-size: 0.95rem;
-  color: limegreen;
+.store-link:hover {
+  text-decoration: underline;
 }
