@@ -18,7 +18,7 @@ body {
 header.hero {
   text-align: center;
   padding: 50px 20px;
-  background: url('header-bg.png') center/cover no-repeat, var(--card-blue);
+  background: url('header-bg.png') center top 30% / cover no-repeat, var(--card-blue);
   position: relative;
   color: white;
 }
