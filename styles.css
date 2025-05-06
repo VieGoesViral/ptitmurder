@@ -175,3 +175,36 @@ footer {
 .life-card p {
   font-size: 0.95em;
 }
+
+.about-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-end;
+  min-width: 180px;
+}
+
+.button-store {
+  display: inline-block;
+  background-color: var(--main-orange);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+}
+
+.button-store:hover {
+  background-color: #e86c00;
+  transform: scale(1.05);
+}
