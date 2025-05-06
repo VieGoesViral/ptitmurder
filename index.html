@@ -12,11 +12,14 @@ fetch("https://api.battlemetrics.com/servers/31879000")
   .then(data => {
     const count = data.data.attributes.players;
     document.getElementById("playerCount").textContent = `• ${count} EN LIGNE`;
+    document.getElementById("playerInline").textContent = `• ${count} en ligne`;
   })
   .catch(() => {
     document.getElementById("playerCount").textContent = "• Hors ligne";
+    document.getElementById("playerInline").textContent = "• Hors ligne";
   });
 </script>
+
 
 
 <body>
