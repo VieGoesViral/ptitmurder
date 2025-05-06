@@ -383,3 +383,9 @@ footer {
 .store-link:hover {
   text-decoration: underline;
 }
+.inline-count {
+  font-size: 1rem;
+  font-weight: normal;
+  color: limegreen;
+  margin-left: 10px;
+}
