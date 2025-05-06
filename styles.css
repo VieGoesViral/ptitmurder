@@ -13,6 +13,8 @@ body {
   color: var(--text-light);
 }
 
+/* ---------------- HERO ----------------- */
+
 header.hero {
   text-align: center;
   padding: 50px 20px;
@@ -50,164 +52,79 @@ header.hero {
   background-color: #e86c00;
 }
 
-section {
-  padding: 40px 20px;
+/* ---------------- ABOUT MODERN ----------------- */
+
+.about-modern {
+  padding: 60px 20px;
 }
 
-.about .stats-cards {
+.about-content {
   display: flex;
-  gap: 20px;
-  margin-top: 20px;
   flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.card {
-  background: var(--card-blue);
-  padding: 20px;
-  border-radius: 8px;
+.about-text {
   flex: 1;
-  min-width: 150px;
-  text-align: center;
+  min-width: 300px;
 }
 
-.team .roles {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.role {
-  background: var(--panel-blue);
-  padding: 15px;
-  border-radius: 6px;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.gallery-grid img {
-  width: 100%;
-  border-radius: 8px;
-  border: 2px solid var(--main-orange);
-}
-
-.external-links {
-  margin-top: 20px;
-}
-
-.discord-link {
-  color: white;
-  background-color: var(--main-orange);
-  display: inline-flex;
-  align-items: center;
-  padding: 10px 16px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.discord-link .icon {
-  width: 20px;
-  margin-right: 10px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-}
-
-.store-link {
-  color: var(--main-orange);
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.store-link:hover {
-  text-decoration: underline;
-}
-.life-section {
-  background-color: var(--card-blue);
-  padding: 40px 20px;
-  border-top: 2px solid var(--main-orange);
-  border-bottom: 2px solid var(--main-orange);
-  text-align: center;
-}
-
-.life-section h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-.life-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.life-card {
-  background-color: var(--panel-blue);
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #2e3b5b;
-  transition: transform 0.2s;
-}
-
-.life-card:hover {
-  transform: translateY(-5px);
-}
-
-.life-card img {
-  width: 50px;
+.about-text h2 {
+  font-size: 2rem;
   margin-bottom: 10px;
 }
 
-.life-card h3 {
-  margin: 10px 0 5px;
-  color: var(--main-orange);
-}
-
-.life-card p {
-  font-size: 0.95em;
-}
-
-.about-flex {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 20px;
+.about-text p {
+  margin-bottom: 20px;
+  line-height: 1.6;
 }
 
 .about-buttons {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: flex-end;
-  min-width: 180px;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-.button-store {
-  display: inline-block;
+.modern-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   background-color: var(--main-orange);
   color: white;
   padding: 10px 16px;
-  border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+}
+
+.modern-btn:hover {
+  background-color: #e66b00;
+}
+
+.modern-btn .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.about-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 200px;
+}
+
+.about-stats .card {
+  background: var(--card-blue);
+  padding: 15px;
+  border-radius: 8px;
   text-align: center;
 }
 
-.button-store:hover {
-  background-color: #e86c00;
-  transform: scale(1.05);
-}
+/* ---------------- TEAM MODERN ----------------- */
 
 .team-modern {
   padding: 40px 20px;
@@ -226,11 +143,11 @@ footer {
 }
 
 .staff-card {
-  background-color: #1f2940;
-  border-left: 5px solid #ff7a00;
+  background-color: var(--panel-blue);
+  border-left: 5px solid var(--main-orange);
   padding: 16px 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease;
 }
 
@@ -248,4 +165,36 @@ footer {
   margin: 4px 0;
   font-size: 0.95rem;
   color: #d1d1d1;
+}
+
+/* ---------------- GALLERY ----------------- */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid var(--main-orange);
+}
+
+/* ---------------- FOOTER ----------------- */
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+.store-link {
+  color: var(--main-orange);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.store-link:hover {
+  text-decoration: underline;
 }
