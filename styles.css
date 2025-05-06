@@ -208,3 +208,44 @@ footer {
   background-color: #e86c00;
   transform: scale(1.05);
 }
+
+.team-modern {
+  padding: 40px 20px;
+}
+
+.team-modern h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.staff-card {
+  background-color: #1f2940;
+  border-left: 5px solid #ff7a00;
+  padding: 16px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+.staff-card:hover {
+  transform: translateY(-4px);
+}
+
+.staff-card h4 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.staff-card p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #d1d1d1;
+}
