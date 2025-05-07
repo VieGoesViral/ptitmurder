@@ -6,6 +6,7 @@
   --text-light: #ffffff;
 }
 
+/* Base */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -13,7 +14,12 @@ body {
   color: var(--text-light);
 }
 
-/* ---------------- NAVBAR ----------------- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Navbar */
 .navbar {
   background-color: var(--panel-blue);
   display: flex;
@@ -80,12 +86,11 @@ body {
   color: limegreen;
 }
 
-/* ---------------- HERO ----------------- */
+/* Hero */
 header.hero {
   text-align: center;
-  padding: 50px 20px;
-  background: url('header-bg.png') center top 30% / cover no-repeat, var(--card-blue);
-  position: relative;
+  padding: 60px 20px;
+  background: url('header-bg.png') center/cover no-repeat, var(--card-blue);
   color: white;
 }
 
@@ -116,7 +121,7 @@ header.hero {
   background-color: #e86c00;
 }
 
-/* ---------------- SERVER SECTION ----------------- */
+/* Server section */
 .server-section {
   background-color: var(--card-blue);
   padding: 60px 20px;
@@ -133,7 +138,6 @@ header.hero {
 
 .server-image img {
   width: 480px;
-  max-width: 100%;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
@@ -185,10 +189,10 @@ header.hero {
   background-color: #4851c4;
 }
 
-/* ---------------- ABOUT SECTION ----------------- */
+/* About section modernized */
 .about-modern {
-  padding: 60px 20px;
   background-color: var(--dark-blue);
+  padding: 80px 20px;
 }
 
 .about-wrapper {
@@ -201,19 +205,20 @@ header.hero {
 
 .about-main {
   flex: 1;
-  min-width: 280px;
+  min-width: 300px;
   animation: fadeInUp 1s ease;
 }
 
 .about-main h2 {
   font-size: 2.2rem;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .about-main p {
   margin-bottom: 20px;
-  line-height: 1.7;
+  font-size: 1.1rem;
   color: #ddd;
+  line-height: 1.7;
 }
 
 .about-buttons {
@@ -245,6 +250,18 @@ header.hero {
   height: 20px;
 }
 
+.about-image {
+  flex: 1;
+  min-width: 300px;
+  max-width: 650px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
 .about-stats {
   display: flex;
   flex-direction: column;
@@ -253,27 +270,17 @@ header.hero {
 }
 
 .about-stats .card {
-  background: var(--card-blue);
-  padding: 15px;
-  border-radius: 8px;
+  background: var(--panel-blue);
+  padding: 18px;
+  border-radius: 10px;
   text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.about-image {
-  margin-top: 40px;
-  text-align: center;
-}
-
-.about-image img {
-  width: 100%;
-  max-width: 1000px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-}
-
-/* ---------------- TEAM MODERN ----------------- */
+/* Team */
 .team-modern {
-  padding: 40px 20px;
+  padding: 60px 20px;
 }
 
 .team-modern h2 {
@@ -313,7 +320,7 @@ header.hero {
   color: #d1d1d1;
 }
 
-/* ---------------- COMMUNITY LIFE ----------------- */
+/* Community Life */
 .life-section {
   background-color: var(--card-blue);
   padding: 60px 20px;
@@ -362,7 +369,7 @@ header.hero {
   color: #ccc;
 }
 
-/* ---------------- GALLERY ----------------- */
+/* Gallery */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -376,7 +383,7 @@ header.hero {
   border: 2px solid var(--main-orange);
 }
 
-/* ---------------- FOOTER ----------------- */
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
@@ -392,23 +399,18 @@ footer {
   text-decoration: underline;
 }
 
-/* ---------------- UTILS ----------------- */
-.inline-count {
-  font-size: 1rem;
-  font-weight: normal;
-  color: limegreen;
-  margin-left: 10px;
-}
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease-out forwards;
-}
-
+/* Animation */
 @keyframes fadeInUp {
-  to {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.fade-in {
+  animation: fadeInUp 1s ease-out both;
 }
