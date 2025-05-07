@@ -81,7 +81,6 @@ body {
 }
 
 /* ---------------- HERO ----------------- */
-
 header.hero {
   text-align: center;
   padding: 50px 20px;
@@ -118,7 +117,6 @@ header.hero {
 }
 
 /* ---------------- SERVER SECTION ----------------- */
-
 .server-section {
   background-color: var(--card-blue);
   padding: 60px 20px;
@@ -188,32 +186,34 @@ header.hero {
 }
 
 /* ---------------- ABOUT SECTION ----------------- */
-
 .about-modern {
   padding: 60px 20px;
+  background-color: var(--dark-blue);
 }
 
-.about-content {
+.about-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
   justify-content: space-between;
-  align-items: flex-start;
+  gap: 40px;
+  align-items: center;
 }
 
-.about-text {
+.about-main {
   flex: 1;
-  min-width: 300px;
+  min-width: 280px;
+  animation: fadeInUp 1s ease;
 }
 
-.about-text h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+.about-main h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
 }
 
-.about-text p {
+.about-main p {
   margin-bottom: 20px;
-  line-height: 1.6;
+  line-height: 1.7;
+  color: #ddd;
 }
 
 .about-buttons {
@@ -259,8 +259,19 @@ header.hero {
   text-align: center;
 }
 
-/* ---------------- STAFF ----------------- */
+.about-image {
+  margin-top: 40px;
+  text-align: center;
+}
 
+.about-image img {
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------------- TEAM MODERN ----------------- */
 .team-modern {
   padding: 40px 20px;
 }
@@ -303,7 +314,6 @@ header.hero {
 }
 
 /* ---------------- COMMUNITY LIFE ----------------- */
-
 .life-section {
   background-color: var(--card-blue);
   padding: 60px 20px;
@@ -353,7 +363,6 @@ header.hero {
 }
 
 /* ---------------- GALLERY ----------------- */
-
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -368,7 +377,6 @@ header.hero {
 }
 
 /* ---------------- FOOTER ----------------- */
-
 footer {
   text-align: center;
   padding: 20px;
@@ -383,9 +391,24 @@ footer {
 .store-link:hover {
   text-decoration: underline;
 }
+
+/* ---------------- UTILS ----------------- */
 .inline-count {
   font-size: 1rem;
   font-weight: normal;
   color: limegreen;
   margin-left: 10px;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
